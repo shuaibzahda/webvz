@@ -1,0 +1,14 @@
+<%= render :partial => 'conf_links' %>
+<h3> Edit Configuration File </h3>
+
+<% form_tag  :action => "create_new_conf_file" do %>
+
+<%= hidden_field "file", "name", :value =>  @file_name %>
+	<%= render :partial => 'conf_details' %>
+
+<tr>
+        <td> <%= submit_tag "Create Configuration File"%> </td>
+</tr>
+
+<% end %>
+

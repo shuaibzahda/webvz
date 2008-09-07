@@ -1,0 +1,238 @@
+/* CSS Document */
+
+body {
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+	background-color: #C7F78F;
+}
+
+#links 
+{
+      	background:#EDF7E7;
+	clear: both;
+      	padding:10px 10px 0 50px;
+}
+
+#header 
+{
+	height: 100px;
+	float: left; 
+	clear: right;
+}
+
+#logo
+{
+	float:left;
+	width: 210px;
+	clear: right;
+	height: 85px;
+}
+
+#content
+{
+	margin: 5px 5px 5px 5px;
+	padding: 5px 5px 5px 5px;
+	clear: both;
+}
+
+#details_block
+{
+	margin: 10px 10px 10px 10px;
+	padding: 10px 10px 10px 10px;	
+}
+
+#all_stuff
+{
+	/*width: 800px; */
+}
+
+#rights
+{
+	height: 30px;
+}
+
+#notice 
+{
+	padding: 5px 5px 5px 5px;
+	margin-left: 5px;
+	background-color: #DFE865;
+	clear:both;
+}
+
+#sub_menu
+{
+	vertical-align: middle;
+	width: 200px;
+	height: 400px;
+	float: left;
+	margin-right: 8px;
+}
+
+#color1
+{
+	background-color: #DFE865;
+}
+
+
+ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+   }
+
+/*- Menu Tabs C--------------------------- */
+
+    #tabsC {
+      float:left;
+      width:100%;
+      background:#EDF7E7;
+      font-size:93%;
+      line-height:normal;
+      }
+    #tabsC ul {
+        margin:0;
+        padding:10px 10px 0 50px;
+        list-style:none;
+      }
+    #tabsC li {
+      display:inline;
+      margin:0;
+      padding:0;
+      }
+    #tabsC a {
+      float:left;
+      background:url("tableftC.gif") no-repeat left top;
+      margin:0;
+      padding:0 0 0 4px;
+      text-decoration:none;
+      }
+    #tabsC a span {
+      float:left;
+      display:block;
+      background:url("tabrightC.gif") no-repeat right top;
+      padding:5px 15px 4px 6px;
+      color:#464E42;
+      }
+    /* Commented Backslash Hack hides rule from IE5-Mac \*/
+    #tabsC a span {float:none;}
+    /* End IE5-Mac hack */
+    #tabsC a:hover span {
+      color:#FFF;
+      }
+    #tabsC a:hover {
+      background-position:0% -42px;
+      }
+    #tabsC a:hover span {
+      background-position:100% -42px;
+      }
+
+        #tabsC #current a {
+                backgrounddth: 200px;
+
+        border-style: solid solid none solid;
+
+        border-color: #94AA74;
+
+        border-size: 1px;
+
+        border-width: 1px;
+
+        margin: 10px;
+
+        }
+
+
+
+#menu li a {
+
+        height: 32px;
+
+          voice-family: "\"}\"";
+
+          voice-family: inherit;
+
+          height: 24px;
+
+        text-decoration: none;
+
+        }
+
+
+
+#menu li a:link, #menu li a:visited {
+
+        color: #5E7830;
+
+        display: block;
+
+        background: url(menu1.gif);
+
+        padding: 8px 0 0 10px;
+
+        }
+
+
+
+#menu li a:hover, #menu li #current {
+
+        color: #26370A;
+
+        background: url(menu1.gif) 0 -32px;
+
+        padding: 8px 0 0 10px;
+
+        }
+
+
+
+#menu li a:active {
+
+        color: #26370A;
+
+        background: url(menu1.gif) 0 -64px;
+
+        padding: 8px 0 0 10px;
+
+        }-position:0% -42px;
+        }
+        #tabsC #current a span {
+                background-position:100% -42px;
+        }
+
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+

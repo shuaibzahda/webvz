@@ -1,0 +1,27 @@
+<%= error_messages_for 'user' %>
+
+<!--[form:user]-->
+
+<tr>
+        <td><label for="user_name">Full Name</label></td>
+        <td> : </td>
+        <td> <%= text_field 'user', 'name'  %></td>
+</tr>
+<tr>
+        <td><label for="user_country">Country</label></td>
+        <td> : </td>
+        <td> <%= country_select 'user', 'country', "choose country" %> </td>
+</tr>
+<tr>
+        <td><label for="user_email"> E-mail</label></td>
+        <td> : </td>
+        <td> <%= text_field 'user', 'email' %> </td>
+</tr>
+<tr>
+        <td><label for="user_phone"> Phone Number</label></td>
+        <td> : </td>
+        <td> <%= text_field 'user', 'phone' %></td>
+</tr>
+
+<!--[eoform:user]-->
+

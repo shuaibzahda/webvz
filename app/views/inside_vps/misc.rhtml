@@ -1,0 +1,52 @@
+<%= render :partial => 'links' %>
+<div id="details_block">
+<h3> Miscellaneous </h3>
+
+<% form_tag  :action => "edit_misc", :vps_id => @vps_id do %>
+
+<table>
+<th> Parameter </th> <th> </th><th> Barrier </th> <th> limit</th>
+
+<tr>
+        <td> Number of files lock </td>
+        <td> : </td>
+        <% v = @conf_file["NUMFLOCK"].split(":") %>
+	<td> <%= text_field "conf", "NUMFLOCK1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+        <td> <%= text_field "conf", "NUMFLOCK2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+
+<tr>
+        <td> Number of PTYs </td>
+        <td> : </td>
+        <% v = @conf_file["NUMPTY"].split(":") %>
+	<td> <%= text_field "conf", "NUMPTY1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+        <td> <%= text_field "conf", "NUMPTY2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+<tr>
+        <td> Number of Open Files </td>
+        <td> : </td>
+        <% v = @conf_file["NUMFILE"].split(":") %>
+	<td> <%= text_field "conf", "NUMFILE1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+        <td> <%= text_field "conf", "NUMFILE2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+<tr>
+        <td> Number of SIGINFO </td>
+        <td> : </td>
+        <% v = @conf_file["NUMSIGINFO"].split(":") %>
+	<td> <%= text_field "conf", "NUMSIGINFO1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+        <td> <%= text_field "conf", "NUMSIGINFO2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+<tr>
+        <td> Number of IPTENT </td>
+        <td> : </td>
+        <% v = @conf_file["NUMIPTENT"].split(":") %>
+	<td> <%= text_field "conf", "NUMIPTENT1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+        <td> <%= text_field "conf", "NUMIPTENT2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+<tr>
+        <td> <%= submit_tag "Edit"%> </td>
+</tr>
+</table>
+
+<% end %>
+</div>

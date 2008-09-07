@@ -1,0 +1,29 @@
+<%= render :partial => 'links' %>
+<h3> <%= session[:name] %>, You have <%= pluralize(@rows.size, "container") %> </h3>
+
+<table>
+<th> Distribution</th> <th> Container ID </th> <th> Name </th> <th> No. Processes </th> <th> Status </th> <th> IP Address </th> <th> Hostname </th>
+<% i = 1 %>
+<% z = 0 %>
+<% for row in @rows -%>
+	<% i = 1 -i%>
+	<tr id="<%= "color"+i.to_s %>">
+		<td> 	<%= link_to image_tag("icons/"+row[5].downcase+".png", :border => 0) , :controller => :user_inside_vps, :action => :view_vps, :id => session[:user_id], :vps_id => row[0] unless row[5].blank? %> </td> 
+			<td> <%=link_to row[0], :controller => :user_inside_vps, :action => :view_vps, :id => session[:user_id], :vps_id => row[0]%> </td> 
+
+	<td> <%= @names[z] %> <% z = z + 1 %> </td>
+	<td> <%=link_to row[1], :controller => :user_inside_vps, :action => :running_processes, :id =>session[:user_id], :vps_id =>row[0]%> </td> 
+	<td> <%=row[2]%> </td>
+	<td> <%=row[3]%> </td>
+	<td> <%=row[4]%> </td>
+
+	<% if row[2].include?("running") %>
+		<td><%= link_to "stop", :action => :stop_vps, :vps_id => row[0], :id => session[:user_id] %></td>
+		<td> <%= link_to "restart", :action => :restart_vps, :vps_id => row[0], :id => session[:user_id] %> </td> 
+	<% else %>
+		<td> <%= link_to "start", :action => :start_vps, :vps_id => row[0], :id => session[:user_id] %> </td>
+	<% end %>
+</tr>
+<% end -%>
+
+</table>

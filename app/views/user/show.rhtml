@@ -1,0 +1,13 @@
+<%= render :partial => 'links' %>
+<table>
+<% for column in User.content_columns %>
+<tr>
+  <td><%= column.human_name %><td> 
+  <td>:</td> 
+  <td> <%=h @user.send(column.name) %></td>
+</tr>
+<% end %>
+</table>
+
+<%= link_to 'Edit', :action => 'edit', :id => @user %> |
+<%= link_to 'Back', :action => 'list' %>

@@ -1,0 +1,12 @@
+<%= render :partial => 'links' %>
+<table>
+<tr> <td> <h3> All OS Templates</h3>  </td> </tr> 
+	<% for template in @templates %>
+		<tr>
+			<td> <%= template %> </td> 
+			<td> <%= link_to "delete",{:action => :delete_template, :name => template}, {:confirm => "Are you sure?", :post => true} %> </td>
+			<td> <%= link_to "copy", :action => :copy_template, :name => template %> </td>
+		</tr>
+<% end %>
+
+</table>

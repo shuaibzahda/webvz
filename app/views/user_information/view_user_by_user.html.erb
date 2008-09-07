@@ -1,0 +1,25 @@
+<h3> User Information </h3>
+<p> 
+	<%= link_to "Edit profile", :action => :edit , :id => @user.id %> |  
+	<%= link_to "Change Password", :action => :change_password, :id => @user.id %> 
+</p>
+<table>
+	<tr>
+		<td> Username </td> <td> : </td> <td> <%= @user.username %> </td>
+	</tr>
+	<tr>
+		<td> Name </td> <td> : </td> <td> <%= @user.name %> </td>
+	</tr>
+	<tr>
+		<td> Country </td> <td> : </td> <td> <%= @user.country %> </td>
+	</tr>
+	<tr>
+		<td> E-mail </td> <td> : </td> <td> <%= @user.email %> </td>
+	</tr>
+	<tr>
+		<td> Phone Number </td> <td> : </td> <td> <%= @user.phone %> </td>
+	</tr>
+	<tr>
+		<td> You are a member since </td> <td> : </td> <td> <%= @user.created_at %> </td>
+	</tr>
+</table>

@@ -1,0 +1,23 @@
+<%= render :partial => 'links' %>
+<div id="details_block">
+ 
+ <h3> Running Processes for <%= @vps_id %> </h3>
+ <table border="1">
+ <th> User </th> <th> PID </td> <th> %CPU </th> <th> %MEM </th> <th> VSZ </th> <th> RSS </th> <th> Stat </th> <th> Start </th> <th> Time </th> <th> Command </th>
+ <% for entry in @procs -%>
+ 	<% values = entry.split(" ") %>
+ 	<tr>
+ 		<td> <%= values[0] %> </td> 
+ 		<td> <%= values[1] %> </td>
+ 		<td> <%= values[2] %> </td>
+ 		<td> <%= values[3] %> </td>
+ 		<td> <%= values[4] %> </td>
+ 		<td> <%= values[5] %> </td>
+ 		<td> <%= values[7] %> </td>
+ 		<td> <%= values[8] %> </td>
+ 		<td> <%= values[9] %> </td>
+ 		<td> <%= values[10] %> </td>
+ 	</tr>
+ <% end -%>
+ <table>
+ </div>

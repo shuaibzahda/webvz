@@ -1,0 +1,11 @@
+<%= render :partial => 'links' %>
+<h1>New user</h1>
+
+<% form_tag :action => 'create' do %>
+	<table>
+  		<%= render :partial => 'form' %>
+		<tr>  
+			<td> <%= submit_tag "Create" %> </td>
+		</tr>
+	</table>
+<% end %>

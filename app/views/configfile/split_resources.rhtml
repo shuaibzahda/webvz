@@ -1,0 +1,27 @@
+<%= render :partial => 'conf_links' %>
+<h3> Split the Hardware Node resources into equal parts. This page generates a full set of system resource control parameters for the given number of Containers.
+</h3>
+
+<% form_tag  :action => "generate_conf" do %>
+
+<table>
+<tr>
+        <td> Name of configuration file</td> <td> : </td> <td> <%= text_field "split", "name", :size => 25 %> </td>
+	<td> note: space is not allowed.</td>
+</tr>
+<tr>
+        <td> Number of containers</td> <td> : </td> <td> <%= text_field "split", "ve", :size => 25 %> </td>
+</tr>
+<tr>
+        <td> Swap Size (Kbytes)</td> <td> : </td> <td> <%= text_field "split", "swap", :size => 25 %> </td>
+</tr>
+
+<tr>
+        <td>
+        <%= submit_tag "Generate" %>
+        </td>
+</tr>
+
+</table>
+<% end %>
+

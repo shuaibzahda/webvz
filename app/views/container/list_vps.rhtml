@@ -1,0 +1,51 @@
+<%= render :partial => 'links' %>
+<h3> You have <%= pluralize(@rows.size, "#{@status} container") %> </h3>
+
+<table>
+<th> Distro</th> <th> Cnt ID </th> <th> Name </th> <th> No. Ps </th> <th> Status </th> <th> IP Address </th> <th> Hostname </th> <th> Owner </th>
+<% i = 1 %>
+<% z = 0 %>
+<% for row in @rows -%>
+	<% i = 1 -i%>
+	<tr id="<%= "color"+i.to_s %>">
+		<td> 	<%= link_to image_tag("icons/"+row[5].downcase+".png", :border => 0) , :controller => :inside_vps, :action => :view_vps, :vps_id => row[0] unless row[5].blank? %> </td> 
+			<td> <%=link_to row[0],:controller => :inside_vps, :action => :view_vps, :vps_id => row[0]%> </td> 
+
+	<td> <%= @names[z] %> <% z = z + 1 %> </td>
+	<td> <%=link_to row[1],:controller => :inside_vps, :action => :running_processes, :vps_id =>row[0]%> </td> 
+	<td> <%=row[2]%> </td>
+	<td> <%=row[3]%> </td>
+	<td> <%=row[4]%> </td>
+	<td>
+		<% vps = Vps.find_by_cnt_id(row[0]) %>
+		<% if vps %>
+			<%= link_to vps.user.name, :action => :vpses_of_user, :user_id => vps.user.id %> 
+		<% else %>
+			<%= link_to "Assign to Owner", :action => :assign_to_owner, :vps_id =>row[0] %> 
+		<% end %>
+	</td> 
+
+	</tr>
+	
+	<tr id="<%= "color"+i.to_s %>">
+	<td> </td>
+	<td> </td>
+	<td> </td>
+	<% if row[2].include?("running") %>
+		<td><%= link_to "stop", :action => :stop_vps, :vps_id => row[0] %></td>
+		<td> <%= link_to "restart" , :action => :restart_vps, :vps_id => row[0] %> </td> 
+	<% else %>
+		<td> <%= link_to "start", :action => :start_vps, :vps_id => row[0] %> </td>
+		<% if session[:permission] == "admin" %>
+			<td> <%= link_to "destroy", {:action => :destroy_vps, :vps_id => row[0]}, :confirm => "Are you sure?", :method => :post %> </td>
+		<% end %>
+	<% end %>
+		<% if session[:permission] == "admin" %>
+			<td> <%= link_to "migrate", :action => :migrate_vps, :vps_id => row[0] %> </td>
+			<td> <%= link_to "create backup", :action => :create_backup, :vps_id => row[0] %> </td>
+		<% end %>
+	<td>  <%= link_to "Change Owner", :action => :assign_to_owner, :vps_id =>row[0] %> </td>
+	</tr>
+<% end -%>
+
+</table>

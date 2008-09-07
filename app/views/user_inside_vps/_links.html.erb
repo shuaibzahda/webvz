@@ -1,0 +1,11 @@
+<div id="sub_menu">
+<div id="menu">
+<ul>
+	<li> <%= link_to "Information", :action => :view_vps, :id => session[:user_id], :vps_id => @vps_id %> </li>
+	<li> <%= link_to "Running Processes", :action => :running_processes, :id => session[:user_id], :vps_id => @vps_id %> </li>
+	<li> <%= link_to "Services", :action => :services, :id => session[:user_id], :vps_id => @vps_id %> </li>
+	<li> <%= link_to "Run Command", :action => :run_command, :id => session[:user_id], :vps_id => @vps_id %>  </li>
+	<li> <%= link_to "Monitor Resources", :action => :monitor_resources , :id => session[:user_id], :vps_id => @vps_id %> </li>
+</ul>
+</div>
+</div>

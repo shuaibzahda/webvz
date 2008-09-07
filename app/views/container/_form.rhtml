@@ -1,0 +1,43 @@
+
+<tr>
+<td> Owner of the container </td> <td> : </td> <td> <%= select("vps","user_id", @users, :prompt => "Choose Owner") %> </td>
+</tr>
+<tr>
+<td> Operating system template </td> <td> : </td> <td> <%= select("vps","os_name", @new_names, :prompt => "Choose Distribution") %> </td>
+</tr>
+<tr>
+<td> Configuration File Name </td> <td> : </td> <td> <%= select("vps", "conf_file", @conf_names, :prompt => "Choose config file")%> </td>
+</tr>
+<tr>
+<td> Container ID </td> <td> : </td> <td> <%= text_field "vps", "vps_id" %> </td>
+</tr>
+<tr>
+<td> Name </td> <td> : </td> <td> <%= text_field "vps", "vps_name" %> </td>
+</tr>
+<tr>
+<td> IP Address </td> <td> : </td> <td> <%= text_field "vps", "ipadd" %></td>
+</tr>
+<tr>
+<td> Hostname </td> <td> : </td> <td> <%= text_field "vps", "hostname" %> </td>
+</tr>
+<tr>
+<td> Nameserver (DNS) </td> <td> : </td> <td> <%= text_field "vps", "nameserver" %> </td>
+</tr>
+<tr>
+<td> Enable booting on startup </td> <td> : </td>
+        <td>
+        Yes <%= radio_button "vps", "booting", "yes" %>
+        No <%= radio_button "vps", "booting", "no" %>
+        </td>
+</tr>
+<tr>
+<td> Start up the container after creating it</td> <td> : </td>
+        <td>
+        Yes <%= radio_button "vps", "starting", "yes" %>
+        No <%= radio_button "vps", "starting", "no" %>
+        </td>
+</tr>
+<tr>
+<td> Root Password (optional) </td> <td> : </td> <td> <%= text_field "vps", "root_pass" %> </td>
+</tr>
+<tr>

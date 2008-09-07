@@ -1,0 +1,23 @@
+<%= render :partial => 'links' %>
+<div id="details_block">
+
+<h3> User Bean Counter for <%= @vps_id %> </h3>
+<table border="1">
+<th> Resource </th> <th> Held </td> <th> Max held </th>  <th> Barrier </th> <th> Limit </th> <th> Failcnt </th>
+<% for entry in @ubc -%>
+	<% values = entry.split(" ") %>
+	<% if values[5].to_i.zero? %>
+	<tr>
+	<% else %>
+	<tr bgcolor="red">
+	<% end %>
+		<td> <%= values[0] %> </td> 
+		<td> <%= values[1] %> </td>
+		<td> <%= values[2] %> </td>
+		<td> <%= values[3] %> </td>
+		<td> <%= values[4] %> </td>
+		<td> <%= values[5] %> </td>
+	</tr>
+<% end -%>
+<table>
+</div>

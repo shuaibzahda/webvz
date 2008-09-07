@@ -1,0 +1,14 @@
+<div id="sub_menu">
+<div id="menu">
+<ul>
+	<li> <%= link_to "All Containers", :action => :list_vps, :status=> "all" %> </li>
+	<li> <%= link_to "Running Containers", :action => :list_vps, :status=> "running"%>  </li>
+	<li> <%= link_to "Stopped Containers", :action => :list_vps, :status=> "stopped"%> </li>
+	<% if session[:permission] == "admin" %>
+		<li> <%= link_to "Backups", :action => :backups %> </li>
+		<li> <%= link_to "New Container", :action => :new_vps %> </li>
+	<% end %>
+</ul>
+
+</div>
+</div>

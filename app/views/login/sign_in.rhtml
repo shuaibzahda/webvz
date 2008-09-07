@@ -1,0 +1,13 @@
+<h2>Sign in</h2>
+<% form_tag do %>
+<p>Username: 
+<%= text_field_tag :username, params[:username] %>
+</p>
+<p> 
+Password: 
+<%= password_field_tag :password, params[:password] %>
+</p>
+
+<%= submit_tag "Sign in" %>
+
+<% end %>

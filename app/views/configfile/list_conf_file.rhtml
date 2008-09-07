@@ -1,0 +1,16 @@
+<%= render :partial => 'conf_links' %>
+<div id="details_block">
+<h3> All Configuration Files </h3>
+<table>
+
+<% for conf in @conf_names -%>
+	<tr> 
+		<td> <%= conf %> </td> <td> | </td> 
+		<td> <%= link_to "Edit", :action => :edit_conf_file , :conf_name => conf %> </td>
+		<td> | </td>
+		<td> <%= link_to "delete", {:action => :delete_conf_file , :conf_name => conf}, :confirm => "Are you sure?", :method => :post %> </td> 
+	</tr>
+<% end -%>
+</table>
+
+</div>

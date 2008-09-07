@@ -1,0 +1,18 @@
+<%= render :partial => 'links' %>
+<h1>Editing user</h1>
+
+<% form_tag :action => 'update', :id => @user do %>
+  <table>
+
+	<%= render :partial => 'editForm' %>
+	<tr>
+		<td> <%= link_to "Change Password", :action => :change_password, :id => @user.id %> </td>
+	</tr>
+	<tr>
+		<td><%= submit_tag 'Edit' %> </td>
+	</tr>
+  </table>
+<% end %>
+
+<%= link_to 'Show', :action => 'show', :id => @user %> |
+<%= link_to 'Back', :action => 'list' %>

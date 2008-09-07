@@ -1,0 +1,14 @@
+<%= render :partial => 'links' %>
+<h3> Create New Container </h3>
+<%= error_messages_for :vps %>
+
+<table>
+<% form_tag  :action => "create_vps" do %>
+	
+	<%= render :partial => 'form' %>
+<tr>
+	<td> <%= submit_tag "Create"%> </td>
+</tr>
+</table>
+<% end %>
+

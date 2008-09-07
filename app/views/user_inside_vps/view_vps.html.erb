@@ -1,0 +1,31 @@
+<%= render :partial => 'links' %>
+<div id="details_block">
+
+<h3> General Information About Container <%= @vps_id %> </h3>
+<table> 
+	<tr>
+		<td> Container </td> <td> : </td> <td> <%= image_tag("icons/"+@line[5].downcase+".png", :border => 0) unless @line[5].blank? %> </td>
+	</tr>
+	<tr>
+		<td> Container ID </td> <td> : </td> <td> <%= @vps_id %> </td>
+	</tr>
+	<tr>
+		<td> Name </td> <td> : </td> 
+		<td> <%= @name %> </td> 
+	</tr>
+	<tr>
+		<td> Container Status </td> <td> : </td> <td> <%= @line[2] %> </td>
+	</tr>
+	<tr>
+		<td> IP Address </td> <td> : </td> <td> <%= @line[3] %> </td>
+	</tr>
+	<tr>
+		<td> Hostname </td> <td> : </td> <td> <%= @line[4] %> </td>
+	</tr>
+	<tr>
+		<td> Uptime </td> <td> : </td> <td> <%= @uptime %> </td>
+	</tr>
+	
+</table>
+
+</div>

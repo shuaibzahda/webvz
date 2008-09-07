@@ -1,0 +1,26 @@
+<%= render :partial => 'links' %>
+<div id="details_block">
+<h3> All services in container <%= @vps_id %> </h3>
+
+<table border"1">
+<th> Name </th> <th> Status </th> <th> Operations </th>
+	<% for service in @all_services -%>
+	<tr> 
+		<td> <%= service %> </td>
+		 <%  out = `vzctl exec #{@vps_id} /etc/init.d/#{service} status` %>  
+		<td> <%= out %> </td> 
+		<td> 
+			<% if out.include?('is running') %>
+				<%= link_to "stop", :action => :stop_service, :vps_id => @vps_id, :ser_name => service, :id => session[:user_id] %> 
+				| <%= link_to "restart", :action => :start_service, :vps_id => @vps_id, :ser_name => service, :id => session[:user_id]  %> </td>
+			<% elsif out.include?('is stopped') %>
+				<%= link_to "start", :action => :start_service, :vps_id => @vps_id, :ser_name => service, :id => session[:user_id]  %> </td> 	
+			<% else %>
+				<%= link_to "stop", :action => :stop_service, :vps_id => @vps_id, :ser_name => service, :id => session[:user_id]  %> 
+				| <%= link_to "restart", :action => :start_service, :vps_id => @vps_id, :ser_name => service, :id => session[:user_id]  %>				
+				| <%= link_to "start", :action => :start_service, :vps_id => @vps_id, :ser_name => service, :id => session[:user_id]  %> </td> 
+			<% end -%> 
+	</tr>
+	<% end -%>
+</table>
+</div>

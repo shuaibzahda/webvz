@@ -1,0 +1,11 @@
+<%= render :partial => 'links' %>
+<%= render :partial => 'top' %>
+<h3> Backup User's Containers </h3>
+<% form_tag :action => :create_user_backup do %>
+	<p> Choose the owner in order to backup all the containers that belong to him/her.</p>
+	<p> <%= select("dump","user_id", @users, :prompt => "Choose Owner") %> </p>
+	<p> <%= submit_tag "Backup" %> </p>
+	<br>
+	<p> Caution: This process may take several minutes. </p>
+<% end %>
+

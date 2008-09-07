@@ -1,0 +1,58 @@
+<head>
+<title>WebVZ: OpenVZ Management Tool</title>
+<%= stylesheet_link_tag 'webvz' %>				
+</head>
+<body>
+   	<div id="logo">
+                <%= link_to image_tag("webvz_small.jpg", :alt => "WebVZ logo", :width => "146", :height => "80", :border => "0"), :controller => :menu, :action => :index %>
+        </div>
+        <div id="header">
+	<p> </p>
+                <h2> OpenVZ Management Tool </h2>
+		<p> 
+		Hostname: <i> <%= `hostname`  %> </i> | IP Address: <i> <%= `hostname -i`  %> </i>
+		</p>
+        </div>
+
+	<% if flash[:notice] %>
+        <div id="notice">
+                <p> <b> Notice </b> </p>
+                <p><%= flash[:notice].gsub("\n", "<br />") %> <p>
+        </div>
+	<% end -%>
+
+	<div id="tabsC">
+	<ul>
+	<%if session[:permission] == "admin" %>
+	<li> <%= link_to "<span> Containers </span>" , :controller => :container, :action => :list_vps, :status=> "all" %> </li>
+		<li> <%= link_to "<span> OS-Templates </span>", :controller => :ostemplate, :action => :list_templates%> </li> 		 
+		<li><%= link_to "<span>Configuration files </span>", :controller => :configfile, :action => :list_conf_file %> </li> 		
+		<li> <%= link_to "<span> OpenVZ</span>" , :controller => :openvz, :action => :vz_status%> </li>
+		 <li> <%= link_to "<span> Users </span>", :controller => :user, :action => :list %> </li>	
+	<% end -%> 
+
+	<% if session[:permission] == "client" %>
+	 <li> <%= link_to "<span> Containers </span>" , :controller => :user_containers, :action => :list_vps, :status=> "all", :id => session[:user_id] %> </li> 
+		<li> <%= link_to "<span> Personalize </span>", :controller => :user_information, :action => :view_user_by_user, :id => session[:user_id] %> </li>
+	<% end -%>
+
+		<li> <%= link_to "<span> About </span>", :controller => :menu, :action => :about %> </li>
+		
+		<%if session[:permission] == nil -%>
+			<li> <%= link_to "<span> Login </span>", :controller => :login, :action => :sign_in %> </li>
+		<% end -%>
+		
+		<% if session[:user_name] %>
+			<li> <%= link_to "<span> Logout (#{session[:user_name]})</span>", :controller => :login, :action => :logout%> </li>
+		<% end %>
+	</ul>
+	</div>
+
+	<div id="content">
+		<%= yield %> 
+	</div>
+
+	<div id="rights"> <p align="center"> All Rights Reserved &copy; Shuaib Zahda 2008</p> </div>
+
+</body>
+</html>

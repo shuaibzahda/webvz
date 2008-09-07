@@ -1,0 +1,19 @@
+<%= render :partial => 'links' %>
+
+<h3> Execute Linux Commands in <%= @vps_id %> </h3>
+<div id="details_block">
+
+<% form_tag :action => :execute_cmd, :vps_id => @vps_id do %>
+<%= text_field "command", "line" , :size => "40"%>
+<%= submit_tag "RUN" %>
+<% end -%>
+
+
+<p> You executed: <b> <%= @cmd %> </b> </p>
+
+<h3> The output: </h3>
+
+<table>
+	 <tr> <td> <%= @output.gsub(/\n/, '<br />') %> </td> </tr>
+</table>
+</div>

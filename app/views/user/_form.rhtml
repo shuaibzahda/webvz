@@ -1,0 +1,48 @@
+<tr>
+	<td colspan="3"><%= error_messages_for 'user' %> </td>
+</tr>
+
+<!--[form:user]-->
+<tr>
+	<td> <label for="user_username">Username</label></td> 
+	<td> : </td>
+	<td> <%= text_field 'user', 'username'  %> </td>
+</tr>
+<tr>
+	<td> <label for="user_password">Password</label></td>
+	<td> : </td>
+	<td><%= password_field 'user', 'password' %></td>
+</tr>
+<tr>
+	<td><label for="user_name">Full Name</label></td>
+	<td> : </td>
+	<td> <%= text_field 'user', 'name'  %></td>
+</tr>
+<tr>
+	<td><label for="user_country">Country</label></td>
+	<td> : </td>
+	<td> <%= country_select 'user', 'country', "choose country" %> </td>
+</tr>
+<tr>
+	<td><label for="user_email"> E-mail</label></td>
+	<td> : </td>
+	<td> <%= text_field 'user', 'email' %> </td>
+</tr>
+<tr>
+	<td><label for="user_phone"> Phone Number</label></td>
+	<td> : </td>
+	<td> <%= text_field 'user', 'phone' %></td>
+</tr>
+<tr>
+	<td> <label for="user_authority"> Access Permission</label></td>
+	<td> : </td>
+	<td> Administartion <%= radio_button 'user', 'authority', 'admin' %>  Client <%= radio_button 'user', 'authority', 'client' %> </td>
+</tr>
+<tr>
+	<td> <label for="user_activated"> Activate User</label></td>
+	<td> : </td>
+	<td> Yes <%= radio_button 'user', 'activated', 'yes' %>  No <%= radio_button 'user', 'activated', 'no' %> </td>
+</tr>
+
+<!--[eoform:user]-->
+

@@ -1,0 +1,50 @@
+<%= render :partial => 'links' %>
+<h3> Virtual Environment Migration </h3>
+<% form_tag  :action => "vzmigrate", :vps_id => @vps_id do %>
+
+<table>	
+<tr> 
+	<td> Destination IP Address.</td> <td> : </td> <td> <%= text_field "vps", "ip", :size => 25 %> </td>
+</tr>
+
+<tr>
+<td> Remove VE area on source Host Node for the successfully migrated VE. </td> <td> : </td>
+        <td>
+        Yes <%= radio_button "vps", "r", "yes" %>
+        No <%= radio_button "vps", "r", "no", :checked => true %>
+        </td>
+</tr>
+
+<tr>
+<td> Perform online (zero-downtime) migration. </td> <td> : </td>
+        <td>
+        Yes <%= radio_button "vps", "online", "yes" %>
+        No <%= radio_button "vps", "online", "no" , :checked => true %>
+        </td>
+</tr>
+
+<tr>
+<td> Do  not clean synced destination VE private area in case of some error. </td> <td> : </td>
+        <td>
+        Yes <%= radio_button "vps", "keepdst", "yes" %>
+        No <%= radio_button "vps", "keepdst", "no", :checked => true %>
+        </td>
+</tr>
+<tr>
+<td> Show output details (verbose). </td> <td> : </td>
+        <td>
+        Yes <%= radio_button "vps", "v", "yes" %>
+        No <%= radio_button "vps", "v", "no", :checked => true %>
+        </td>
+</tr>
+<tr>
+	<td>
+        <%= submit_tag "migrate" %>
+	</td>
+</tr>
+
+</table>
+<% end %>
+<font color="red">
+<h3> Warning: This operation may take several minutes, please wait. </h3>
+</font>

@@ -1,0 +1,178 @@
+<table>
+<th> Parameter </th> <th> </th><th> Barrier </th> <th> limit</th>
+
+<tr>
+	<td> Number of TCP Sockets </td> 
+	<td> : </td> 
+	<% v = @conf_file["NUMTCPSOCK"].split(":") %>
+	<td> <%= text_field "conf", "NUMTCPSOCK1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+	<td> <%= text_field "conf", "NUMTCPSOCK2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+<tr>
+	<td> TCP Send Buffer Size </td> 
+	<td> : </td> 
+	<% v = @conf_file["TCPSNDBUF"].split(":") %>
+	<td> <%= text_field "conf", "TCPSNDBUF1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+	<td> <%= text_field "conf", "TCPSNDBUF2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+<tr>
+	<td> TCP Recieve Buffer Size </td> 
+	<td> : </td> 
+	<% v = @conf_file["TCPRCVBUF"].split(":") %>
+	<td> <%= text_field "conf", "TCPRCVBUF1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+	<td> <%= text_field "conf", "TCPRCVBUF2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+<tr>
+	<td> Other Socket Buffer Size </td> 
+	<td> : </td> 
+	<% v = @conf_file["OTHERSOCKBUF"].split(":") %>
+	<td> <%= text_field "conf", "OTHERSOCKBUF1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+	<td> <%= text_field "conf", "OTHERSOCKBUF2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+<tr>
+	<td> UDP Recieve Buffer Size </td> 
+	<td> : </td> 
+	<% v = @conf_file["DGRAMRCVBUF"].split(":") %>
+	<td> <%= text_field "conf", "DGRAMRCVBUF1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+	<td> <%= text_field "conf", "DGRAMRCVBUF2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+<tr>
+	<td> Number of Other Sockets </td> 
+	<td> : </td> 
+	<% v = @conf_file["NUMOTHERSOCK"].split(":") %>
+	<td> <%= text_field "conf", "NUMOTHERSOCK1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+	<td> <%= text_field "conf", "NUMOTHERSOCK2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+
+<tr>
+        <td> Disk Space (KByte) </td>
+        <td> : </td>
+        <% v = @conf_file["DISKSPACE"].split(":") %>
+        <td> <%= text_field "conf", "DISKSPACE1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+        <td> <%= text_field "conf", "DISKSPACE2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+
+<tr>
+        <td> Disk Inodes </td>
+        <td> : </td>
+        <% v = @conf_file["DISKINODES"].split(":") %>
+        <td> <%= text_field "conf", "DISKINODES1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+        <td> <%= text_field "conf", "DISKINODES2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+<tr>
+        <td> Quota Time </td>
+        <td> : </td>
+        <td> <%= text_field "conf", "QUOTATIME", :value => @conf_file["QUOTATIME"].gsub("\"", ""), :size => "20" unless  @conf_file["QUOTATIME"].blank?%> </td>
+</tr>
+
+<tr>
+        <td> Guaranteed Minimum CPU </td>
+        <td> : </td>
+ <td> <%= text_field "conf", "CPUUNITS", :value =>  @conf_file["CPUUNITS"].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+
+<tr>
+        <td> Number of processes </td>
+        <td> : </td>
+        <% v = @conf_file["NUMPROC"].split(":") %>
+        <td> <%= text_field "conf", "NUMPROC1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+        <td> <%= text_field "conf", "NUMPROC2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+
+<tr>
+        <td> Kernel Memory Size </td>
+        <td> : </td>
+        <% v = @conf_file["KMEMSIZE"].split(":") %>
+        <td> <%= text_field "conf", "KMEMSIZE1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+        <td> <%= text_field "conf", "KMEMSIZE2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+
+<tr>
+        <td> Number of Locked Pages </td>
+        <td> : </td>
+        <% v = @conf_file["LOCKEDPAGES"].split(":") %>
+        <td> <%= text_field "conf", "LOCKEDPAGES1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+        <td> <%= text_field "conf", "LOCKEDPAGES2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+<tr>
+        <td> Private VM Pages </td>
+        <td> : </td>
+        <% v = @conf_file["PRIVVMPAGES"].split(":") %>
+        <td> <%= text_field "conf", "PRIVVMPAGES1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+        <td> <%= text_field "conf", "PRIVVMPAGES2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+<tr>
+        <td> Number of shm Pages </td>
+        <td> : </td>
+        <% v = @conf_file["SHMPAGES"].split(":") %>
+        <td> <%= text_field "conf", "SHMPAGES1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+        <td> <%= text_field "conf", "SHMPAGES2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+<tr>
+        <td> Physical Pages </td>
+        <td> : </td>
+        <% v = @conf_file["PHYSPAGES"].split(":") %>
+        <td> <%= text_field "conf", "PHYSPAGES1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+        <td> <%= text_field "conf", "PHYSPAGES2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+<tr>
+        <td> VM Guar Pages </td>
+        <td> : </td>
+        <% v = @conf_file["VMGUARPAGES"].split(":") %>
+        <td> <%= text_field "conf", "VMGUARPAGES1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+        <td> <%= text_field "conf", "VMGUARPAGES2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+<tr>
+        <td> OOM Guar Pages </td>
+        <td> : </td>
+        <% v = @conf_file["OOMGUARPAGES"].split(":") %>
+        <td> <%= text_field "conf", "OOMGUARPAGES1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+        <td> <%= text_field "conf", "OOMGUARPAGES2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+
+<tr>
+        <td> Disk Cache Size </td>
+        <td> : </td>
+        <% v = @conf_file["DCACHESIZE"].split(":") %>
+        <td> <%= text_field "conf", "DCACHESIZE1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+        <td> <%= text_field "conf", "DCACHESIZE2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+
+<tr>
+        <td> Number of files lock </td>
+        <td> : </td>
+        <% v = @conf_file["NUMFLOCK"].split(":") %>
+        <td> <%= text_field "conf", "NUMFLOCK1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+        <td> <%= text_field "conf", "NUMFLOCK2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+
+<tr>
+        <td> Number of PTYs </td>
+        <td> : </td>
+        <% v = @conf_file["NUMPTY"].split(":") %>
+        <td> <%= text_field "conf", "NUMPTY1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+        <td> <%= text_field "conf", "NUMPTY2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+<tr>
+        <td> Number of Open Files </td>
+        <td> : </td>
+        <% v = @conf_file["NUMFILE"].split(":") %>
+        <td> <%= text_field "conf", "NUMFILE1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+        <td> <%= text_field "conf", "NUMFILE2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+<tr>
+        <td> Number of SIGINFO </td>
+        <td> : </td>
+        <% v = @conf_file["NUMSIGINFO"].split(":") %>
+        <td> <%= text_field "conf", "NUMSIGINFO1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+        <td> <%= text_field "conf", "NUMSIGINFO2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+<tr>
+        <td> Number of IPTENT </td>
+        <td> : </td>
+        <% v = @conf_file["NUMIPTENT"].split(":") %>
+        <td> <%= text_field "conf", "NUMIPTENT1", :value => v[0].gsub("\"", ""), :size => "20"%> </td>
+        <td> <%= text_field "conf", "NUMIPTENT2", :value => v[1].gsub("\"", ""), :size => "20"%> </td>
+</tr>
+
+

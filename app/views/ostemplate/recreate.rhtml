@@ -1,0 +1,30 @@
+<%= render :partial => 'links' %>
+
+<h3> Re-Create OS-Template from customized one. </h3>
+<table>
+<tr> 
+	<td colspan="4"> <h3> You have <%= pluralize(@rows.size, "container") %> </h3> </td> 
+</tr>
+<th> Distro</th> <th> Container ID </th> <th> Name </th> <th> No. Processes </th> <th> Status </th> <th> IP Address </th> <th> Hostname </th>
+<% i = 1 %>
+<% z = 0 %>
+<% for row in @rows -%>
+	<% i = 1 -i%>
+	<tr id="<%= "color"+i.to_s %>">
+		<td> 	<%= image_tag("icons/"+row[5].downcase+".png", :border => 0) unless row[5].blank? %> </td> 
+			<td> <%= row[0] %> </td> 
+	 <td> <%= @names[z] %> <% z = z + 1 %> </td>
+	<td> <%=row[1]%> </td> 
+	<td> <%=row[2]%> </td>
+	<td> <%=row[3]%> </td>
+	<td> <%=row[4]%> </td>
+	<td> <%= link_to "re-create OS-template", :action => :recreate_template, :vps_id => row[0] %> </td>	
+</tr>
+<% end -%>
+
+</table>
+
+<font color="red">
+<h3>Warning: It is advised that you implement this operation on non production container since, this operation stops the container from functioning and deletes its all IP addresses. After the operation finishes you can restart the container and configure the IP addresses.</h3> 
+</font>
+

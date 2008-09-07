@@ -1,0 +1,26 @@
+<%= render :partial => 'links' %>
+<h1>Listing users</h1>
+
+<table border="1">
+  <tr>
+  <%# for column in User.content_columns %>
+    <th>Name</th>
+    <th>Username</th>
+    <th>Authority</th>
+  <%# end %>
+  </tr>
+  
+<% for user in @users %>
+  <tr>
+   <td><%= link_to user.name, :action => 'show', :id => user %> </td>
+   <td> <%= user.username %> </td>
+   <td> <%= user.authority %> </td>
+
+    <td><%= link_to 'Edit', :action => 'edit', :id => user %></td>
+    <td><%= link_to 'Change Password', :action => 'change_password', :id => user %></td>
+  </tr>
+<% end %>
+</table>
+
+<%#= link_to 'Previous page', { :page => @user_pages.current.previous } if @user_pages.current.previous %>
+<%#= link_to 'Next page', { :page => @user_pages.current.next } if @user_pages.current.next %> 

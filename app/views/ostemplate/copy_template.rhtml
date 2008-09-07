@@ -1,0 +1,28 @@
+<%= render :partial => 'links' %>
+<table>
+<tr> <td> <h3> Copy OS template from this computer to another computer </h3> </td> </tr>
+	<% form_tag :action => :transfer_file, :name => @name do %>
+		<tr>
+			<td> Template Name: <b> <%= @name %></b> </td> 
+		</tr>
+		<tr>
+			<td> Example: shuaib@10.0.1.15  OR shuaib@myserver </td> 
+		</tr>
+		<tr>
+			<td> Destination Server Username: <%= text_field 'dest', 'username' %> </td> 
+		</tr>
+		<tr>
+			<td> Destination Server IP address: <%= text_field 'dest', 'add' %> </td> 
+		</tr>
+		<tr> 
+			<td> <%= submit_tag "Transfer" %> </td> 
+		</tr>
+	<% end %>
+</table>
+
+<font color="red"> 
+<h3> Warning: This operation may take several minutes, please wait. </h3>
+<h3> 
+Warning: This operation will be done without supplying the password to the destination server. This can be done by passing over the password of the destination server using ssh. <a href="http://wiki.openvz.org/Migration_from_one_HN_to_another"> Do the first part of this tutorial before preceeding in this operation. </a>
+</h3> 
+</font>

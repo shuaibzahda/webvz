@@ -1,0 +1,21 @@
+<%= render :partial => 'links' %>
+<%= render :partial => 'top' %>
+
+<br>
+<h3> All the dumped files </h3>
+<table>
+<th> File Name </th> <th> Owner </th>
+<% i = 1 %>
+<% for dump in @dumps %>
+	<tr id="color<%= i %>">
+	<% i = 1 - i %>
+		<td> <%= dump[1] %> </td>
+		<% id = dump[1].gsub("vzdump-",'').gsub('.tar','').gsub("\n",'') %>
+		<% vps = Vps.find_by_cnt_id(id) %>
+		<td> <%= vps.user.name if vps%> </td>
+		<td> <%= link_to "delete", {:action => :delete_dump, :dump_id => id}, :confirm => "Are you sure?", :method => :post %> </td>
+		<td> <%= link_to "restore", :action => :restore, :dump_id => id %> </td>
+	</tr>
+<% end %>
+
+</table>

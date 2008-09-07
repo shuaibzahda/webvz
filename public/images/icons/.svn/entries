@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="5"
+   name=""
+   committed-date="2007-01-30T19:12:34.729897Z"
+   url="https://easyvz.svn.sourceforge.net/svnroot/easyvz/trunk/ezvz/gui/icons"
+   last-author="shuveb"
+   kind="dir"
+   uuid="797f505f-0428-0410-8ff1-cd8083636cda"
+   repos="https://easyvz.svn.sourceforge.net/svnroot/easyvz"
+   revision="11"/>
+<entry
+   committed-rev="5"
+   name="kubuntu.png"
+   text-time="2007-01-30T19:26:11.000000Z"
+   committed-date="2007-01-30T19:12:34.729897Z"
+   checksum="1f673271f1eab4760e7990de9f70479d"
+   last-author="shuveb"
+   kind="file"
+   prop-time="2007-01-30T19:26:07.000000Z"/>
+<entry
+   committed-rev="5"
+   name="yoper.png"
+   text-time="2007-01-30T19:26:11.000000Z"
+   committed-date="2007-01-30T19:12:34.729897Z"
+   checksum="e467266a41fab672feb48cfe339675dd"
+   last-author="shuveb"
+   kind="file"
+   prop-time="2007-01-30T19:26:07.000000Z"/>
+<entry
+   committed-rev="5"
+   name="fedora.png"
+   text-time="2007-01-30T19:26:11.000000Z"
+   committed-date="2007-01-30T19:12:34.729897Z"
+   checksum="aca5460245e54755d93c1ef1cbb0ee9b"
+   last-author="shuveb"
+   kind="file"
+   prop-time="2007-01-30T19:26:08.000000Z"/>
+<entry
+   committed-rev="5"
+   name="mandriva.png"
+   text-time="2007-01-30T19:26:11.000000Z"
+   committed-date="2007-01-30T19:12:34.729897Z"
+   checksum="dc7e5a0482a7dce8d4d0007a11b334b0"
+   last-author="shuveb"
+   kind="file"
+   prop-time="2007-01-30T19:26:08.000000Z"/>
+<entry
+   committed-rev="5"
+   name="vector.png"
+   text-time="2007-01-30T19:26:11.000000Z"
+   committed-date="2007-01-30T19:12:34.729897Z"
+   checksum="bd5ef6c5613d0940ec272f82c538ac07"
+   last-author="shuveb"
+   kind="file"
+   prop-time="2007-01-30T19:26:08.000000Z"/>
+<entry
+   committed-rev="5"
+   name="redhat.png"
+   text-time="2007-01-30T19:26:11.000000Z"
+   committed-date="2007-01-30T19:12:34.729897Z"
+   checksum="cab83396890f64e20c4a62424bbaa50c"
+   last-author="shuveb"
+   kind="file"
+   prop-time="2007-01-30T19:26:08.000000Z"/>
+<entry
+   committed-rev="5"
+   name="slax.png"
+   text-time="2007-01-30T19:26:11.000000Z"
+   committed-date="2007-01-30T19:12:34.729897Z"
+   checksum="5dc0e36ab2051255cd837a0fa96d639b"
+   last-author="shuveb"
+   kind="file"
+   prop-time="2007-01-30T19:26:08.000000Z"/>
+<entry
+   committed-rev="5"
+   name="damnsmall.png"
+   text-time="2007-01-30T19:26:11.000000Z"
+   committed-date="2007-01-30T19:12:34.729897Z"
+   checksum="b5999d9640d2d93908d1d7eabd374a66"
+   last-author="shuveb"
+   kind="file"
+   prop-time="2007-01-30T19:26:08.000000Z"/>
+<entry
+   committed-rev="5"
+   name="xubuntu.png"
+   text-time="2007-01-30T19:26:11.000000Z"
+   committed-date="2007-01-30T19:12:34.729897Z"
+   checksum="b7a659cc788862cf25962d69613711f2"
+   last-author="shuveb"
+   kind="file"
+   prop-time="2007-01-30T19:26:08.000000Z"/>
+<entry
+   committed-rev="5"
+   name="turbolinux.png"
+   text-time="2007-01-30T19:26:11.000000Z"
+   committed-date="2007-01-30T19:12:34.729897Z"
+   checksum="4d8b1627d2cbd3ddccd1b805fcbda1c4"
+   last-author="shuveb"
+   kind="file"
+   prop-time="2007-01-30T19:26:09.000000Z"/>
+<entry
+   committed-rev="5"
+   name="slackware.png"
+   text-time="2007-01-30T19:26:11.000000Z"
+   committed-date="2007-01-30T19:12:34.729897Z"
+   checksum="16b3e59f41ccd032432ce02bdadd0a16"
+   last-author="shuveb"
+   kind="file"
+   prop-time="2007-01-30T19:26:09.000000Z"/>
+<entry
+   committed-rev="5"
+   name="mepis.png"
+   text-time="2007-01-30T19:26:11.000000Z"
+   committed-date="2007-01-30T19:12:34.729897Z"
+   checksum="fe0b0401b173210aebad2dcd16223fd6"
+   last-author="shuveb"
+   kind="file"
+   prop-time="2007-01-30T19:26:09.000000Z"/>
+<entry
+   committed-rev="5"
+   name="arch.png"
+   text-time="2007-01-30T19:26:11.000000Z"
+   committed-date="2007-01-30T19:12:34.729897Z"
+   checksum="60dfd7f6d7abd472acb4f50f3163fc20"
+   last-author="shuveb"
+   kind="file"
+   prop-time="2007-01-30T19:26:09.000000Z"/>
+<entry
+   committed-rev="5"
+   name="xandros.png"
+   text-time="2007-01-30T19:26:11.000000Z"
+   committed-date="2007-01-30T19:12:34.729897Z"
+   checksum="a0978f15c4e6b7d1f16c25db2ba63d66"
+   last-author="shuveb"
+   kind="file"
+   prop-time="2007-01-30T19:26:09.000000Z"/>
+<entry
+   committed-rev="5"
+   name="linux_logo.png"
+   text-time="2007-01-30T19:26:11.000000Z"
+   committed-date="2007-01-30T19:12:34.729897Z"
+   checksum="c130fa6de3240803919994d21dde0a0f"
+   last-author="shuveb"
+   kind="file"
+   prop-time="2007-01-30T19:26:09.000000Z"/>
+<entry
+   committed-rev="5"
+   name="suse.png"
+   text-time="2007-01-30T19:26:11.000000Z"
+   committed-date="2007-01-30T19:12:34.729897Z"
+   checksum="b471c6850fd1cb690e9e7fef74dd4c58"
+   last-author="shuveb"
+   kind="file"
+   prop-time="2007-01-30T19:26:09.000000Z"/>
+<entry
+   committed-rev="5"
+   name="debian.png"
+   text-time="2007-01-30T19:26:11.000000Z"
+   committed-date="2007-01-30T19:12:34.729897Z"
+   checksum="d2bbe34b57c028b495dcdceeedfe991b"
+   last-author="shuveb"
+   kind="file"
+   prop-time="2007-01-30T19:26:10.000000Z"/>
+<entry
+   committed-rev="5"
+   name="ubuntu.png"
+   text-time="2007-01-30T19:26:11.000000Z"
+   committed-date="2007-01-30T19:12:34.729897Z"
+   checksum="8508659e8b008e3a7e9e7a7d76b453a0"
+   last-author="shuveb"
+   kind="file"
+   prop-time="2007-01-30T19:26:10.000000Z"/>
+<entry
+   committed-rev="5"
+   name="pclinuxos.png"
+   text-time="2007-01-30T19:26:11.000000Z"
+   committed-date="2007-01-30T19:12:34.729897Z"
+   checksum="ae51b8effe73a4aeb6487c73c71c9371"
+   last-author="shuveb"
+   kind="file"
+   prop-time="2007-01-30T19:26:10.000000Z"/>
+<entry
+   committed-rev="5"
+   name="lfs.png"
+   text-time="2007-01-30T19:26:11.000000Z"
+   committed-date="2007-01-30T19:12:34.729897Z"
+   checksum="49b7d4fe3bc300f5f17707dc3d86f309"
+   last-author="shuveb"
+   kind="file"
+   prop-time="2007-01-30T19:26:10.000000Z"/>
+<entry
+   committed-rev="5"
+   name="linspire.png"
+   text-time="2007-01-30T19:26:11.000000Z"
+   committed-date="2007-01-30T19:12:34.729897Z"
+   checksum="17949809d0dac39b85e9af738d6afa8b"
+   last-author="shuveb"
+   kind="file"
+   prop-time="2007-01-30T19:26:10.000000Z"/>
+<entry
+   committed-rev="5"
+   name="morphix.png"
+   text-time="2007-01-30T19:26:11.000000Z"
+   committed-date="2007-01-30T19:12:34.729897Z"
+   checksum="731d7c0559836c8da206cf21db7bda39"
+   last-author="shuveb"
+   kind="file"
+   prop-time="2007-01-30T19:26:10.000000Z"/>
+<entry
+   committed-rev="5"
+   name="knoppix.png"
+   text-time="2007-01-30T19:26:11.000000Z"
+   committed-date="2007-01-30T19:12:34.729897Z"
+   checksum="ae142d3ef8217278961e4686fcbbdbad"
+   last-author="shuveb"
+   kind="file"
+   prop-time="2007-01-30T19:26:10.000000Z"/>
+<entry
+   committed-rev="5"
+   name="gentoo.png"
+   text-time="2007-01-30T19:26:11.000000Z"
+   committed-date="2007-01-30T19:12:34.729897Z"
+   checksum="f6a7dc745146e4dd5f546b36034790ba"
+   last-author="shuveb"
+   kind="file"
+   prop-time="2007-01-30T19:26:11.000000Z"/>
+<entry
+   committed-rev="5"
+   name="edubuntu.png"
+   text-time="2007-01-30T19:26:11.000000Z"
+   committed-date="2007-01-30T19:12:34.729897Z"
+   checksum="68144e23c2c3028441ea5cae77ef87ba"
+   last-author="shuveb"
+   kind="file"
+   prop-time="2007-01-30T19:26:11.000000Z"/>
+<entry
+   committed-rev="5"
+   name="centos.png"
+   text-time="2007-01-30T19:26:11.000000Z"
+   committed-date="2007-01-30T19:12:34.729897Z"
+   checksum="f537808927ebe20847294c6ba2fe47db"
+   last-author="shuveb"
+   kind="file"
+   prop-time="2007-01-30T19:26:11.000000Z"/>
+</wc-entries>

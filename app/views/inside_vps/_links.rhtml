@@ -1,0 +1,22 @@
+<div id="sub_menu">
+<div id="menu">
+<ul>
+	<li> <%= link_to "Information", :action => :view_vps , :vps_id => @vps_id %> </li>
+	<li> <%= link_to "Running Processes", :action => :running_processes , :vps_id => @vps_id %> </li>
+		<li> <%= link_to "Services", :action => :services , :vps_id => @vps_id %> </li>
+		<li> <%= link_to "Run Command", :action => :run_command , :vps_id => @vps_id %>  </li>
+		<li> <%= link_to "Monitor Resources", :action => :monitor_resources , :vps_id => @vps_id %> </li>
+		<li> <%= link_to "Booting options", :action => :booting , :vps_id => @vps_id %> </li>
+		<li> <%= link_to "Basic Network Config", :action => :basic_net, :vps_id => @vps_id %> </li>
+<% if session[:permission] == "admin" -%>
+		<li>  <%= link_to "Adv. Network Config", :action => :adv_net, :vps_id =>@vps_id %> </li>
+		<li> <%= link_to "Disk Management", :action => :disk_mgt, :vps_id =>@vps_id %>  </li>
+		<li> <%= link_to "CPU Management", :action => :cpu_mgt, :vps_id =>@vps_id %> </li>
+		<li> <%= link_to "Memory", :action => :memory_mgt, :vps_id =>@vps_id  %> </li>
+	<li> <%= link_to "Misc", :action => :misc, :vps_id =>@vps_id  %> </li>
+<% end -%>
+
+</ul>
+
+</div>
+</div>

@@ -1,0 +1,9 @@
+<%= render :partial => 'links' %>
+<div id="details_block">
+
+<h3> Execute Linux Commands in <%= @vps_id %> </h3>
+<% form_tag :action => :execute_cmd, :vps_id => @vps_id, :id => session[:user_id] do %>
+<%= text_field "command", "line" , :size => "40"%>
+<%= submit_tag "RUN" %>
+<% end -%>
+</div>

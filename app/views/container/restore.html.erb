@@ -1,0 +1,17 @@
+<%= render :partial => 'links' %>
+<%= render :partial => 'top' %>
+<br>
+
+<h3> Restore Container <%= @dump_id %> </h3>
+
+<% form_tag :action => :restore_dump, :dump_id => @dump_id do %>
+<p>
+	Owner of the container: <%= select("dump","user_id", @users, :prompt => "Choose Owner") %>
+</p>
+<p>
+	New Container ID: <%= text_field("dump","id") %> NOTE: The ID Must be different from <%= @dump_id %> or any other used container ids
+</p>
+<p>
+	<%= submit_tag "Restore" %>
+</p>
+<% end %>

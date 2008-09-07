@@ -1,0 +1,17 @@
+<%= render :partial => 'links' %>
+<table>
+<tr> <td> <h3> Create New Customized Template </h3> </td> </tr>
+	<% form_tag :action => :make_new_template, :vps_id => @vps_id do %>
+		<tr>
+			<td> New Template Name: <%= text_field 'temp', 'name' %> </td> <td> e.g. centos-5-i386-[rails] replace rails with a meaningful name for you. </td> 
+		</tr>
+		<tr> 
+			<td> <%= submit_tag "Create" %> </td> 
+		</tr>
+	<% end %>
+</table>
+
+<font color="red"> 
+<h3> Warning: This operation may take several minutes, please wait. </h3>
+<h3>Warning: It is advised that you implement this operation on non production container since, this operation stops the container from functioning and deletes its all IP addresses. After the operation finishes you can restart the container and configure the IP addresses.</h3>
+</font>

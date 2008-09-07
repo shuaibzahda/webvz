@@ -1,0 +1,2 @@
+module OpenvzHelper
+end

@@ -1,0 +1,11 @@
+<h3> OpenVZ Service </h3>
+<p><b> <%= @status %></b> </p>
+
+<% if @status.include?("running") -%>
+	<p> <%= link_to "Stop OpenVZ", :controller => :openvz, :action => :stop_vz %> </p>
+	<p> <%= link_to "Restart OpenVZ", :controller => :openvz, :action => :restart_vz %>	</p>
+<% else -%>
+	<p> <%= link_to "Start OpenVZ", :controller => :openvz, :action => :start_vz %> </p>	
+<% end -%> 
+
+<h4> kernel version: <%= `uname -r` %> </h4>

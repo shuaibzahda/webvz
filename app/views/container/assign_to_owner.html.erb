@@ -1,0 +1,14 @@
+<%= render :partial => 'links' %>
+
+<h3> Assign or Change Ownership of Container <%= @vps_id %> </h3>
+
+<% if @owner %>
+<p> Current Owner is <%= @owner.user.name %> </p>
+<% else %>
+<p> No owner </p>
+<% end %>
+
+<% form_tag :action => :change_owner, :vps_id => @vps_id do %>
+	<p> Owner of the container  : <%= select("vps","user_id", @users, :prompt => "Choose Owner") %> </p> 
+	<%= submit_tag "Change Owner" %>
+<% end %>

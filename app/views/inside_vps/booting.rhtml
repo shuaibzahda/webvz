@@ -1,0 +1,28 @@
+<%= render :partial => 'links' %>
+
+<h3> Enable/Disable Booting of Container <%= @vps_id %> </h3>
+<div id="details_block">
+<table>
+
+<% form_tag :action => :edit_booting, :vps_id => @vps_id do %>
+<tr>
+<td> Enable booting on startup </td> <td> : </td>
+        <td>
+	<% if @conf_file["ONBOOT"].include?("yes") %>
+        	Yes <%= radio_button "conf", "booting", "yes", :checked => true %>
+        	No <%= radio_button "conf", "booting", "no" %>
+	<% else %>
+		Yes <%= radio_button "conf", "booting", "yes" %>
+                No <%= radio_button "conf", "booting", "no", :checked => true %>
+	<% end %>
+        </td>
+</tr>
+
+<tr> 
+	<td> <%= submit_tag "Change" %> </td>
+</tr>
+<% end -%>
+
+</table>
+
+</div>

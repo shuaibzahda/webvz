@@ -1,0 +1,21 @@
+<%= render :partial => 'conf_links' %>
+<h3> Create New Configuration File </h3>
+
+<% form_tag  :action => "create_new_conf_file" do %>
+
+<table>
+
+	<tr> <td> Name of the configuration file</td> <td> :  </td> <td> <%= text_field "file", "name", :size => "20"%> </td>
+	<td> note: space is not allowed </td>
+        </tr>
+</table>
+
+<%= render :partial => 'conf_details' %>
+
+<tr>
+        <td> <%= submit_tag "Create Configuration File"%> </td>
+</tr>
+</table>
+
+<% end %>
+
