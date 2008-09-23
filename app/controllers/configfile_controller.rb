@@ -27,21 +27,21 @@ class ConfigfileController < ApplicationController
 
 	def edit_conf_file
 		@file_name = params[:conf_name]
-		path = "/etc/sysconfig/vz-scripts/ve-#{@file_name}.conf-sample"	
+		path = "/etc/vz/conf/ve-#{@file_name}.conf-sample"
                 cnf = Vps.new
                 @conf_file = cnf.read_sample_conf_file(path)
 	end
 
 	def delete_conf_file
 		@file_name = params[:conf_name]
-                `rm -rf /etc/sysconfig/vz-scripts/ve-#{@file_name}.conf-sample`
+                `rm -rf /etc/vz/conf/ve-#{@file_name}.conf-sample`
 		flash[:notice] = "#{@file_name} configuration file was deleted." 
                 redirect_to :action => :list_conf_file
 	end
 =begin
 	def validate_conf_file
 		@file_name = params[:conf_name]
-		output = `vzcfgvalidate /etc/sysconfig/vz-scripts/ve-#{@file_name}.conf-sample`
+		output = `vzcfgvalidate /etc/vz/conf/ve-#{@file_name}.conf-sample`
 		flash[:notice] = output 
 		redirect_to :action => :list_conf_file
 	end
