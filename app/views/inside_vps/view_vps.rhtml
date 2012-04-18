@@ -17,6 +17,16 @@
 		<% end -%>
 	</tr>
 	<tr>
+		<td> Package </td> <td> : </td> 
+		<% form_tag :action => :change_package, :vps_id => @vps_id do %>
+			<td>
+			  <% origin = @conf_file["ORIGIN_SAMPLE"].strip_quotes.chomp %>
+			  <%= select_tag "origin_sample", options_for_select(@conf_names, origin) %>
+			  <%= submit_tag "Change" %> </td>
+		<% end -%>
+	</tr>
+	
+	<tr>
 		<td> Container Status </td> <td> : </td> <td> <%= @line[2] %> </td>
 	</tr>
 	<tr>
