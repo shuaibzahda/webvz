@@ -58,7 +58,7 @@ class InsideVpsController < ApplicationController
 		read_conf
 	end
 	def change_package
-		output = `vzctl set #{@vps_id} --apply-config=#{params[:origin_sample]} --save`
+		output = `vzctl set #{@vps_id} --apply-config #{params[:origin_sample]} --save`
 		write_conf(output, 'view_vps')
 	end
 	def root_pass
