@@ -54,6 +54,12 @@ class InsideVpsController < ApplicationController
                 #extract name of distro
                 @line  << distro_name(@line[0])
 		@uptime = `vzctl exec #{@vps_id} uptime`
+		@conf_names = get_conf_files_names
+		read_conf
+	end
+	def change_package
+		output = `vzctl set #{@vps_id} --applyconfig #{params[:origin_sample]} --save`
+		write_conf(output, 'view_vps')
 	end
 	def root_pass
 	end
